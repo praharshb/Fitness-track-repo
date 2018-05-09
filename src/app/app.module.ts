@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { GameComponent } from './game/game.component';
 import { LoginComponent } from './login/login.component';
 import { BmicalcComponent } from './bmicalc/bmicalc.component';
+import { NutritionComponent } from './nutrition/nutrition.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BmicalcComponent } from './bmicalc/bmicalc.component';
     HomeComponent,
     GameComponent,
     LoginComponent,
-    BmicalcComponent
+    BmicalcComponent,
+    NutritionComponent
   ],
   imports: [
     BrowserModule ,
@@ -27,6 +29,7 @@ import { BmicalcComponent } from './bmicalc/bmicalc.component';
       {path: 'game' , component: GameComponent},
       {path: 'login', component: LoginComponent},
       { path:'bmicalc',component: BmicalcComponent},
+      { path:'nutrition',component: NutritionComponent},
       {path:'',redirectTo: '/home', pathMatch: 'full'}
     ])
   ],
