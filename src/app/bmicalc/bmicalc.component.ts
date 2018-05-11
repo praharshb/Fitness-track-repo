@@ -24,8 +24,8 @@ export class BmicalcComponent implements OnInit {
         f_bmi += 1;
         diff   = 0;
       }
-      bmi = f_bmi + "." + diff;
-      return bmi;
+      var new_bmi = f_bmi + "." + diff;
+      return new_bmi;
     }
   compute()
   {
@@ -40,10 +40,10 @@ export class BmicalcComponent implements OnInit {
       } else
       {
       let it = f.hti.value*1;
-      var ii = parseInt(it);
+      var ii = it;
       }
-      var fi = parseInt(f.htf.value * 12);
-      var i =  parseInt(f.htf.value * 12) + f.hti.value*1.0;  
+      var fi = f.htf.value * 12;
+      var i =  f.htf.value * 12 + f.hti.value*1.0;  
       if (!this.chkw(v))
       {
       alert("Please enter a number for your height.");
