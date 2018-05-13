@@ -1,15 +1,20 @@
-import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
-import { RouterModule , Routes } from "@angular/router";
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { MessagesComponent } from './messages/messages.component';
 import { HomeComponent } from './home/home.component';
 import { GameComponent } from './game/game.component';
+import { MessagesService } from './services/messages.service';
+import { GameService } from './services/game.service';
 import { LoginComponent } from './login/login.component';
-import { BmicalcComponent } from './bmicalc/bmicalc.component';
 import { NutritionComponent } from './nutrition/nutrition.component';
+import { WorkoutComponent } from './workout/workout.component';
+
+
 
 @NgModule({
   declarations: [
@@ -19,21 +24,22 @@ import { NutritionComponent } from './nutrition/nutrition.component';
     HomeComponent,
     GameComponent,
     LoginComponent,
-    BmicalcComponent,
-    NutritionComponent
+    NutritionComponent,
+    WorkoutComponent
   ],
   imports: [
-    BrowserModule ,
+    BrowserModule,
+    HttpModule,
     RouterModule.forRoot([
-      { path:'home',component: HomeComponent},
-      {path: 'game' , component: GameComponent},
-      {path: 'login', component: LoginComponent},
-      { path:'bmicalc',component: BmicalcComponent},
-      { path:'nutrition',component: NutritionComponent},
-      {path:'',redirectTo: '/home', pathMatch: 'full'}
+        { path: 'home', component: HomeComponent },
+        { path: 'game', component: GameComponent },
+        { path: 'login', component: LoginComponent },
+        { path: 'nutrition', component: NutritionComponent },
+        { path: 'workout', component: WorkoutComponent },
+        { path: '', redirectTo: '/home', pathMatch: 'full'}
     ])
   ],
-  providers: [],
+  providers: [MessagesService, GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

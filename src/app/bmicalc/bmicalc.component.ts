@@ -11,7 +11,7 @@ export class BmicalcComponent implements OnInit {
 
   ngOnInit() {
   }
-  cal_bmi(lbs, ins)
+  cal_bmi(lbs: any, ins: number)
   {
       let h2 = ins * ins;
       let bmi = lbs/h2 * 703
@@ -61,7 +61,7 @@ export class BmicalcComponent implements OnInit {
       f.bmi.focus();
   }
 
-    chkw(w){
+    chkw(w: any){
       if (isNaN(parseInt(w))){
         return false;
       } else if (w < 0){
