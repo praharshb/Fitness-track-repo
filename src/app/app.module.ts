@@ -15,6 +15,8 @@ import { NutritionComponent } from './nutrition/nutrition.component';
 import { WorkoutComponent } from './workout/workout.component';
 import { ProfileComponent } from './profile/profile.component';
 import { MotivationComponent } from './motivation/motivation.component';
+import { SearchusersComponent } from './searchusers/searchusers.component';
+// import { SearchuserComponent } from './searchuser/searchuser.component';
 
 
 
@@ -29,7 +31,9 @@ import { MotivationComponent } from './motivation/motivation.component';
     NutritionComponent,
     WorkoutComponent,
     ProfileComponent,
-    MotivationComponent
+    MotivationComponent,
+    SearchusersComponent,
+    // SearchuserComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +46,8 @@ import { MotivationComponent } from './motivation/motivation.component';
         { path: 'nutrition', component: NutritionComponent },
         { path: 'workout', component: WorkoutComponent },
         { path: 'motivation', component: MotivationComponent },
+        { path: 'searchusers', component: SearchusersComponent },
+        // { path: 'searchuser', component: SearchuserComponent },
         { path: '', redirectTo: '/home', pathMatch: 'full'}
     ])
   ],
