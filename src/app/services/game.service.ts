@@ -19,7 +19,7 @@ export class GameService {
       if(password == '123'){
           // Log the user in
           this.Me = { Name: name, MyQuotes: [] };
-          this._Router.navigate(['/game']);
+          this._Router.navigate(['/profile']);
       }
   }
 
@@ -27,7 +27,7 @@ export class GameService {
     this.Me = { Name: name, MyQuotes: [] };
     this.pic = pic;
     this.token = token;
-    this._Router.navigate(['/game']);
+    this._Router.navigate(['/profile']);
 }
 
 }

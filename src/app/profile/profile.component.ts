@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
+  [x: string]: any;
   constructor() { }
 
   ngOnInit() {
   }
-
+  profile(Name: string, Age: number, Height: number, Weight: number, Goalweight: number)
+  {
+    this.Game.profit(Name, Age, Height, Weight, Goalweight);
+}
 }

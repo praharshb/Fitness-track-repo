@@ -1,0 +1,22 @@
+.card-header{
+    background-color: rgb(240, 240, 240);
+}
+
+.card{
+    background-color: rgb(240, 240, 240);
+    border: 15px solid grey;
+}
+
+input{
+    background-color: white;
+    margin-bottom:5px;
+}
+
+button{
+    border: px solid grey;
+}
+
+h4{
+    text-align: center !important;
+    font-size: 35px !important;
+}
