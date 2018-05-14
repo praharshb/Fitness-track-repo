@@ -13,6 +13,8 @@ import { GameService } from './services/game.service';
 import { LoginComponent } from './login/login.component';
 import { NutritionComponent } from './nutrition/nutrition.component';
 import { WorkoutComponent } from './workout/workout.component';
+import { ProfileComponent } from './profile/profile.component';
+import { MotivationComponent } from './motivation/motivation.component';
 
 
 
@@ -25,7 +27,9 @@ import { WorkoutComponent } from './workout/workout.component';
     GameComponent,
     LoginComponent,
     NutritionComponent,
-    WorkoutComponent
+    WorkoutComponent,
+    ProfileComponent,
+    MotivationComponent
   ],
   imports: [
     BrowserModule,
@@ -34,8 +38,10 @@ import { WorkoutComponent } from './workout/workout.component';
         { path: 'home', component: HomeComponent },
         { path: 'game', component: GameComponent },
         { path: 'login', component: LoginComponent },
+        { path: 'profile', component: ProfileComponent },
         { path: 'nutrition', component: NutritionComponent },
         { path: 'workout', component: WorkoutComponent },
+        { path: 'motivation', component: MotivationComponent },
         { path: '', redirectTo: '/home', pathMatch: 'full'}
     ])
   ],
